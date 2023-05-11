@@ -1,10 +1,39 @@
-# for-helper
-The for-helper library provides a set of utility classes and methods to simplify common loop operations in Java.
+## ForHelper
+ForHelper is a Java library that provides a simple and readable syntax for iteration over arrays and collections. It is based on the For class from the for-helper library, and provides a convenient wrapper for common loop operations.
 
-One of the main features of the library is the For class, which allows for concise and readable iteration over collections and arrays. The For class provides a fluent API for specifying loop conditions, step sizes, and iteration directions, and supports both indexed and non-indexed loops.
+## Version
+1.0.0
 
-In addition to the For class, the library includes several other utility classes, such as LoopUtil and RangeUtil, which provide various loop-related operations and calculations.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-The for-helper library is designed to improve the readability and maintainability of loop-heavy Java code by reducing the amount of boilerplate code and providing a more natural syntax for loop constructs. It is easy to use and integrates seamlessly with existing Java code.
+## Usage
+To use ForHelper in your Java project, simply add the following dependency to your pom.xml file:
 
-To get started with for-helper, simply add the library to your project's dependencies and start using the provided classes and methods in your code. We welcome contributions and feedback from the Java community to help make for-helper even better!
+## xml
+```xml
+<dependency>
+    <groupId>com.example</groupId>
+    <artifactId>for-helper</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+Here's an example of how to use ForHelper to iterate over an array of integers:
+ 
+```java
+public class Main {
+    public static void main(String[] args) {
+        Integer[] nums = {1, 2, 3, 4, 5};
+
+        ForHelper<Integer> forHelper = new ForHelper<>(nums);
+        forHelper.forEach((index, num) -> {
+            System.out.println("Index: " + index + ", Value: " + num);
+        });
+    }
+}
+```
+## Disclaimer
+As a student, this project is primarily for learning and practice purposes. While we have made every effort to ensure the correctness and reliability of the code, we cannot guarantee that it is free from errors or suitable for all use cases. Use this library at your own risk, and please report any issues or suggestions for improvement to the project repository.
+
+## Contact
+If you have any questions or feedback on ForHelper, feel free to contact us at [272584437@qq.com]. Thank you for your interest in this project!
